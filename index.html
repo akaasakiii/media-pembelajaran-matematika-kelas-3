@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petualangan Pengukuran Panjang - Kelas 3</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f0f7ff;color:#24334b}
+header{background:linear-gradient(120deg,#2563eb,#06b6d4);color:white;padding:28px 18px;text-align:center}
+header h1{margin:8px 0;font-size:28px}
+header p{margin:7px}
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:14px;background:white;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0001}
+button{border:0;border-radius:12px;padding:11px 16px;background:#2563eb;color:white;font-weight:bold;cursor:pointer}
+button:hover{filter:brightness(.92)}
+nav button{background:#e8f1ff;color:#1d4ed8}
+nav button.active{background:#2563eb;color:white}
+main{max-width:1000px;margin:auto;padding:20px}
+.page{display:none}
+.page.active{display:block}
+.card{background:white;padding:22px;border-radius:18px;margin:14px 0;box-shadow:0 4px 15px #24334b12}
+h2{color:#1d4ed8}
+h3{color:#0f766e}
+.hero{text-align:center;padding:35px 15px;background:#fff;border-radius:20px}
+.emoji{font-size:55px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.tile{background:#eff6ff;padding:18px;border-radius:15px;text-align:center}
+.tile b{display:block;margin:8px}
+.question{padding:15px;background:#f1f5f9;border-radius:12px;margin:12px 0}
+.options{display:grid;gap:8px;margin-top:10px}
+.options button{background:white;color:#24334b;border:2px solid #dbeafe;text-align:left}
+.options button:hover{border-color:#2563eb}
+.feedback{font-weight:bold;margin-top:10px;min-height:24px}
+input[type=number],textarea{padding:12px;border:2px solid #bfdbfe;border-radius:10px;width:100%;font-size:16px}
+textarea{min-height:85px}
+.big{font-size:23px;font-weight:bold;color:#0f766e}
+.ruler{display:flex;overflow:hidden;margin:20px 0;background:#fff3c4;border:2px solid #eab308;border-radius:8px;height:65px}
+.ruler span{min-width:30px;border-left:1px solid #92400e;position:relative;padding-top:32px;font-size:12px}
+.ruler span:first-child{border-left:0}
+.badge{display:inline-block;background:#fef3c7;color:#92400e;padding:8px 13px;border-radius:20px;font-weight:bold}
+footer{text-align:center;padding:25px;color:#64748b}
+.small{font-size:13px;color:#64748b}
+</style>
+</head>
+<body>
+<header>
+<div class="emoji">📏 📐 📚</div>
+<h1>Petualangan Pengukuran Panjang</h1>
+<p>Media Pembelajaran Interaktif Matematika Kelas III SD</p>
+<p>Belajar • Bermain • Mengukur • Berprestasi</p>
+</header>
+
+<nav id="nav">
+<button class="active" onclick="show('home',this)">🏠 Beranda</button>
+<button onclick="show('tujuan',this)">🎯 Tujuan</button>
+<button onclick="show('paham',this)">📖 Memahami</button>
+<button onclick="show('makna',this)">🌍 Memaknai</button>
+<button onclick="show('praktik',this)">🧮 Mengaplikasi</button>
+<button onclick="show('game',this)">🎮 Game</button>
+<button onclick="show('evaluasi',this)">📝 Evaluasi</button>
+<button onclick="show('refleksi',this)">💭 Refleksi</button>
+</nav>
+
+<main>
+<section id="home" class="page active">
+<div class="hero">
+<div class="emoji">🌟</div>
+<h2>Halo, Teman Matematika!</h2>
+<p>Selamat datang di petualangan pengukuran panjang.</p>
+<p>Yuk, belajar mengukur benda di sekitar kita dengan benar!</p>
+<button onclick="show('paham')">Mulai Belajar 🚀</button>
+</div>
+<div class="grid">
+<div class="tile">📖<b>MEMAHAMI</b>Kenali satuan dan alat ukur.</div>
+<div class="tile">🌍<b>MEMAKNAI</b>Temukan manfaat pengukuran.</div>
+<div class="tile">🎮<b>MENGAPLIKASI</b>Berlatih melalui permainan.</div>
+<div class="tile">💭<b>REFLEKSI</b>Kenali hasil belajarmu.</div>
+</div>
+<div class="card">
+<h3>👩‍🏫 Identitas Guru</h3>
+<p>Guru Kelas: <b>ENAYANA, S.Pd.SD</b></p>
+<p>NIP. 198106232022212011</p>
+<p>Kepala Sekolah: <b>SYOFIAH, A. Ma. Pd, S.Pd.SD</b></p>
+<p>NIP. 198107242011012009</p>
+</div>
+</section>
+
+<section id="tujuan" class="page">
+<div class="card">
+<h2>🎯 Tujuan Pembelajaran</h2>
+<p>Setelah mengikuti pembelajaran, siswa diharapkan mampu:</p>
+<ol>
+<li>Menjelaskan pengertian pengukuran panjang.</li>
+<li>Mengenali penggaris dan meteran.</li>
+<li>Mengenal satuan sentimeter (cm) dan meter (m).</li>
+<li>Mengukur panjang benda menggunakan alat ukur baku.</li>
+<li>Menjelaskan hubungan 1 meter = 100 sentimeter.</li>
+<li>Membandingkan panjang beberapa benda.</li>
+<li>Menyelesaikan masalah pengukuran dalam kehidupan sehari-hari.</li>
+</ol>
+<div class="badge">Fase B • Kelas III SD</div>
+</div>
+<div class="card">
+<h3>💡 Pertanyaan Pemantik</h3>
+<ul>
+<li>Bagaimana cara mengetahui panjang pensil?</li>
+<li>Mengapa kita membutuhkan alat ukur?</li>
+<li>Apakah panjang meja dapat diukur dengan penggaris?</li>
+<li>Kapan kita menggunakan meteran?</li>
+</ul>
+</div>
+</section>
+
+<section id="paham" class="page">
+<div class="card">
+<h2>📖 1. MEMAHAMI</h2>
+<h3>Apa itu pengukuran panjang?</h3>
+<p>Pengukuran panjang adalah kegiatan mengetahui seberapa panjang atau pendek suatu benda dengan menggunakan alat ukur dan satuan tertentu.</p>
+<div class="grid">
+<div class="tile"><div class="emoji">📏</div><b>Penggaris</b>Digunakan untuk mengukur benda kecil seperti pensil dan buku.</div>
+<div class="tile"><div class="emoji">📐</div><b>Meteran</b>Digunakan untuk mengukur benda yang lebih panjang seperti meja dan pintu.</div>
+</div>
+</div>
+<div class="card">
+<h3>Mengenal satuan panjang</h3>
+<div class="grid">
+<div class="tile"><div class="big">cm</div><b>Sentimeter</b>Untuk mengukur benda yang relatif pendek.</div>
+<div class="tile"><div class="big">m</div><b>Meter</b>Untuk mengukur benda yang lebih panjang.</div>
+</div>
+<p class="big">1 meter = 100 sentimeter</p>
+<p>Contoh: 2 meter = 200 sentimeter.</p>
+</div>
+<div class="card">
+<h3>Bagaimana cara mengukur dengan penggaris?</h3>
+<ol>
+<li>Letakkan ujung benda tepat pada angka 0.</li>
+<li>Pastikan benda sejajar dengan penggaris.</li>
+<li>Lihat angka pada ujung benda yang lain.</li>
+<li>Catat hasil pengukuran beserta satuannya.</li>
+</ol>
+<div class="emoji">✏️ ━━━━━━━━━ 📏</div>
+<p>Contoh: Jika ujung pensil berada pada angka 15, panjang pensil adalah 15 cm.</p>
+</div>
+<div class="card">
+<h3>❓ Cek Pemahaman</h3>
+<p>Alat yang tepat untuk mengukur panjang pensil adalah ...</p>
+<div class="options">
+<button onclick="check(this,false,'Sebaiknya gunakan penggaris untuk pensil.')">A. Meteran bangunan</button>
+<button onclick="check(this,true,'Benar! Penggaris cocok untuk mengukur pensil.')">B. Penggaris</button>
+<button onclick="check(this,false,'Jam digunakan untuk mengukur waktu.')">C. Jam</button>
+</div><div class="feedback"></div>
+</div>
+</section>
+
+<section id="makna" class="page">
+<div class="card">
+<h2>🌍 2. MEMAKNAI</h2>
+<p>Pengukuran panjang sangat berguna dalam kehidupan sehari-hari.</p>
+<div class="grid">
+<div class="tile">✏️<b>Pensil</b>Diukur menggunakan penggaris.</div>
+<div class="tile">📚<b>Buku</b>Diukur menggunakan penggaris.</div>
+<div class="tile">🪑<b>Meja</b>Dapat diukur menggunakan meteran.</div>
+<div class="tile">🚪<b>Pintu</b>Diukur menggunakan meteran.</div>
+</div>
+</div>
+<div class="card">
+<h3>🛒 Cerita: Membeli Pita</h3>
+<p>Ibu membeli pita sepanjang 2 meter. Pita tersebut akan digunakan untuk menghias 4 hadiah dengan panjang yang sama.</p>
+<p><b>Pertanyaan:</b> Berapa sentimeter panjang pita seluruhnya?</p>
+<div class="options">
+<button onclick="check(this,false,'Ingat, 1 meter sama dengan 100 cm.')">A. 20 cm</button>
+<button onclick="check(this,true,'Hebat! 2 × 100 = 200 cm.')">B. 200 cm</button>
+<button onclick="check(this,false,'Coba hitung kembali: 2 × 100.')">C. 400 cm</button>
+</div><div class="feedback"></div>
+</div>
+<div class="card">
+<h3>💡 Renungkan</h3>
+<p>Mengapa kita perlu mengukur benda menggunakan satuan yang sama?</p>
+<p>Karena satuan yang sama membantu kita membandingkan panjang benda dengan lebih tepat.</p>
+</div>
+</section>
+
+<section id="praktik" class="page">
+<div class="card">
+<h2>🧮 3. MENGAPLIKASI</h2>
+<h3>Praktik Mengukur Benda di Sekitarmu</h3>
+<p>Ambil penggaris atau meteran. Ukurlah benda di sekitarmu, kemudian tuliskan hasilnya.</p>
+<div class="question">
+<label>Nama benda pertama</label><input id="benda1" placeholder="Contoh: Pensil">
+<label>Hasil pengukuran (cm)</label><input id="hasil1" type="number" placeholder="Contoh: 15">
+</div>
+<div class="question">
+<label>Nama benda kedua</label><input id="benda2" placeholder="Contoh: Buku">
+<label>Hasil pengukuran (cm)</label><input id="hasil2" type="number" placeholder="Contoh: 20">
+</div>
+<button onclick="simpanPraktik()">Simpan Hasil Pengukuran</button>
+<div id="praktikHasil" class="feedback"></div>
+</div>
+<div class="card">
+<h3>📏 Penggaris Virtual</h3>
+<p>Amati skala penggaris berikut. Setiap garis mewakili 1 cm.</p>
+<div class="ruler" id="ruler"></div>
+<p>Jika panjang benda mencapai angka 8, berapa panjangnya?</p>
+<button onclick="check(this,true,'Betul! Panjangnya 8 cm.')">8 cm</button>
+<button onclick="check(this,false,'Perhatikan angka pada penggaris.')">6 cm</button>
+<button onclick="check(this,false,'Coba hitung kembali skalanya.')">10 cm</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="game" class="page">
+<div class="card">
+<h2>🎮 4. GAME EDUKASI</h2>
+<p>Jawab pertanyaan dan kumpulkan bintang sebanyak-banyaknya!</p>
+<div class="badge">⭐ Skor Game: <span id="score">0</span></div>
+</div>
+<div class="card">
+<h3>GAME 1 – Tebak Panjang Benda</h3>
+<div class="emoji">✏️</div>
+<p>Sebuah pensil memiliki panjang 15 cm. Berapa panjangnya dalam sentimeter?</p>
+<div class="options">
+<button onclick="gameAnswer(this,false,'Coba perhatikan informasi pada soal.')">10 cm</button>
+<button onclick="gameAnswer(this,true,'Hebat! Jawabannya 15 cm.')">15 cm</button>
+<button onclick="gameAnswer(this,false,'Bukan 20 cm.')">20 cm</button>
+</div><div class="feedback"></div>
+</div>
+<div class="card">
+<h3>GAME 2 – Pilih Alat Ukur</h3>
+<p>Kamu ingin mengukur panjang papan tulis. Alat apa yang paling tepat?</p>
+<div class="options">
+<button onclick="gameAnswer(this,false,'Penghapus bukan alat ukur.')">Penghapus</button>
+<button onclick="gameAnswer(this,true,'Benar! Meteran lebih praktis untuk benda panjang.')">Meteran</button>
+<button onclick="gameAnswer(this,false,'Pensil bukan alat ukur baku.')">Pensil</button>
+</div><div class="feedback"></div>
+</div>
+<div class="card">
+<h3>GAME 3 – Pasangkan Satuan</h3>
+<p>Panjang ruang kelas lebih tepat dinyatakan dengan satuan ...</p>
+<div class="options">
+<button onclick="gameAnswer(this,false,'Cm biasanya untuk benda lebih pendek.')">Sentimeter</button>
+<button onclick="gameAnswer(this,true,'Tepat! Meter cocok untuk panjang ruang kelas.')">Meter</button>
+</div><div class="feedback"></div>
+</div>
+<div class="card">
+<h3>GAME 4 – Tantangan Matematika</h3>
+<p>Rani memiliki pita 100 cm. Ia membeli lagi pita sepanjang 50 cm. Berapa panjang pita Rani sekarang?</p>
+<div class="options">
+<button onclick="gameAnswer(this,false,'Coba jumlahkan kedua ukuran.')">100 cm</button>
+<button onclick="gameAnswer(this,true,'Benar! 100 + 50 = 150 cm.')">150 cm</button>
+<button onclick="gameAnswer(this,false,'Jumlahnya bukan 200 cm.')">200 cm</button>
+</div><div class="feedback"></div>
+</div>
+</section>
+
+<section id="evaluasi" class="page">
+<div class="card">
+<h2>📝 EVALUASI HOTS</h2>
+<p>Kerjakan 10 soal berikut. Pilih jawaban paling tepat. Setiap jawaban benar mendapat 10 poin.</p>
+<div id="quiz"></div>
+<button onclick="submitQuiz()">Periksa Jawaban dan Lihat Nilai</button>
+<div id="result" class="card"></div>
+</div>
+</section>
+
+<section id="refleksi" class="page">
+<div class="card">
+<h2>💭 REFLEKSI PEMBELAJARAN</h2>
+<p>Bagaimana pengalaman belajarmu hari ini?</p>
+<div class="options">
+<button onclick="reflect('😊 Sangat memahami')">😊 Saya sangat memahami.</button>
+<button onclick="reflect('🙂 Cukup memahami')">🙂 Saya cukup memahami.</button>
+<button onclick="reflect('😐 Masih perlu latihan')">😐 Saya masih perlu latihan.</button>
+<button onclick="reflect('😟 Belum memahami')">😟 Saya belum memahami.</button>
+</div>
+<div id="reflection" class="feedback"></div>
+<h3>Jawablah pertanyaan berikut:</h3>
+<p>1. Apa hal baru yang kamu pelajari?</p>
+<textarea id="r1"></textarea>
+<p>2. Bagian mana yang paling kamu sukai?</p>
+<textarea id="r2"></textarea>
+<p>3. Bagian mana yang masih sulit?</p>
+<textarea id="r3"></textarea>
+<button onclick="saveReflection()">Simpan Refleksi</button>
+<div id="saveR" class="feedback"></div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>Media Pembelajaran Matematika Kelas III SD</p>
+<p>Materi: Pengukuran Panjang Menggunakan Satuan Baku</p>
+<p>Belajar dengan gembira, mengukur dengan tepat! 🌟</p>
+</footer>
+
+<script>
+function show(id,btn){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+if(btn)btn.classList.add('active');
+else document.querySelectorAll('nav button').forEach(b=>{
+if(b.getAttribute('onclick').includes("'"+id+"'"))b.classList.add('active');
+});
+window.scrollTo(0,0);
+}
+function check(btn,correct,msg){
+let box=btn.parentElement.nextElementSibling;
+box.textContent=(correct?'✅ ':'❌ ')+msg;
+box.style.color=correct?'#15803d':'#dc2626';
+}
+let score=0;
+function gameAnswer(btn,correct,msg){
+let box=btn.parentElement.nextElementSibling;
+if(btn.dataset.done)return;
+btn.dataset.done='1';
+if(correct){score+=10;document.getElementById('score').textContent=score;}
+box.textContent=(correct?'🌟 ':'💡 ')+msg;
+box.style.color=correct?'#15803d':'#dc2626';
+}
+function simpanPraktik(){
+let a=document.getElementById('benda1').value;
+let b=document.getElementById('benda2').value;
+let x=Number(document.getElementById('hasil1').value);
+let y=Number(document.getElementById('hasil2').value);
+let out=document.getElementById('praktikHasil');
+if(!a||!b||!x||!y){out.textContent='Lengkapi semua data terlebih dahulu.';return;}
+out.textContent=`Hasil tersimpan: ${a} = ${x} cm dan ${b} = ${y} cm. ${x>y?a:b} lebih panjang.`;
+}
+let ruler=document.getElementById('ruler');
+for(let i=0;i<=15;i++){
+let s=document.createElement('span');s.textContent=i;ruler.appendChild(s);
+}
+const questions=[
+['Panjang pensil 14 cm. Panjang penghapus 5 cm. Berapa selisihnya?',['7 cm','9 cm','10 cm'],1,'14 - 5 = 9 cm.'],
+['1 meter sama dengan berapa sentimeter?',['10 cm','100 cm','1.000 cm'],1,'1 meter = 100 sentimeter.'],
+['Alat paling tepat untuk mengukur panjang ruang kelas adalah ...',['Meteran','Penghapus','Pensil'],0,'Meteran cocok untuk mengukur benda yang panjang.'],
+['Pita 2 meter sama dengan ...',['20 cm','200 cm','2.000 cm'],1,'2 × 100 = 200 cm.'],
+['Buku A panjangnya 20 cm dan buku B 25 cm. Buku mana lebih panjang?',['Buku A','Buku B','Sama panjang'],1,'25 cm lebih panjang daripada 20 cm.'],
+['Doni mengukur meja mulai dari angka 2, bukan angka 0. Apa yang sebaiknya dilakukan?',['Langsung membaca angka akhir','Mengurangi hasil akhir dengan angka awal','Menambahkan angka awal'],1,'Panjang benda diperoleh dari angka akhir dikurangi angka awal.'],
+['Panjang tali 150 cm. Berapa meter dan sentimeter?',['1 m 50 cm','15 m','5 m 10 cm'],0,'150 cm = 1 m 50 cm.'],
+['Rina mengukur meja dengan jengkal, sedangkan Budi memakai penggaris. Mengapa hasilnya mungkin berbeda?',['Ukuran jengkal setiap orang berbeda','Penggaris tidak memiliki ukuran','Meja berubah panjang'],0,'Jengkal bukan satuan baku dan dapat berbeda setiap orang.'],
+['Sebuah pita 100 cm dipotong 2 bagian sama panjang. Berapa panjang setiap bagian?',['25 cm','50 cm','75 cm'],1,'100 ÷ 2 = 50 cm.'],
+['Ani memiliki tali 80 cm. Ia membutuhkan tali 1 meter. Berapa cm lagi yang dibutuhkan?',['10 cm','20 cm','30 cm'],1,'100 - 80 = 20 cm.']
+];
+let answers={};
+let quiz=document.getElementById('quiz');
+questions.forEach((q,i)=>{
+let d=document.createElement('div');d.className='question';
+d.innerHTML=`<b>${i+1}. ${q[0]}</b>`;
+q[1].forEach((o,j)=>{
+d.innerHTML+=`<label style="display:block;padding:7px"><input type="radio" name="q${i}" value="${j}"> ${String.fromCharCode(65+j)}. ${o}</label>`;
+});
+quiz.appendChild(d);
+});
+function submitQuiz(){
+let correct=0,missing=0,detail='';
+questions.forEach((q,i)=>{
+let selected=document.querySelector(`input[name="q${i}"]:checked`);
+if(!selected){missing++;return;}
+if(Number(selected.value)===q[2])correct++;
+detail+=`<p>Soal ${i+1}: ${Number(selected.value)===q[2]?'✅ Benar':'❌ Belum tepat'} — ${q[3]}</p>`;
+});
+if(missing){document.getElementById('result').innerHTML=`Masih ada ${missing} soal yang belum dijawab.`;return;}
+let nilai=correct*10;
+document.getElementById('result').innerHTML=`<h3>Hasil Evaluasi</h3><div class="big">${nilai}/100</div><p>Jawaban benar: ${correct} dari 10 soal.</p><p>${nilai>=80?'Hebat! Kamu sudah memahami materi.':nilai>=60?'Bagus! Terus berlatih, ya.':'Jangan menyerah! Pelajari materi kembali.'}</p>${detail}`;
+}
+function reflect(text){document.getElementById('reflection').textContent='Refleksimu: '+text;}
+function saveReflection(){
+let a=document.getElementById('r1').value;
+let b=document.getElementById('r2').value;
+let c=document.getElementById('r3').value;
+if(!a||!b||!c){document.getElementById('saveR').textContent='Silakan isi semua pertanyaan refleksi.';return;}
+localStorage.setItem('refleksiMatematika',JSON.stringify({a,b,c}));
+document.getElementById('saveR').textContent='✅ Refleksi berhasil disimpan pada perangkat ini.';
+}
+</script>
+</body>
+</html>
